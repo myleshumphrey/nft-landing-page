@@ -23,6 +23,36 @@ p {
   margin: 0;
 }
 
+/* HEADER */
+header {
+  -webkit-box-shadow: var(--header-shadow);
+          box-shadow: var(--header-shadow);
+  background: #385dc4;
+}
+
+header .container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
 section {
   padding: 5em 0;
 }
@@ -31,30 +61,6 @@ section {
   width: 85%;
   max-width: 65em;
   margin: 0 auto;
-}
-
-/* HEADER */
-header {
-  -webkit-box-shadow: var(--header-shadow);
-          box-shadow: var(--header-shadow);
-}
-
-/*
-header .container {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-*/
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 2rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: red;
 }
 
 /* Split - About Section */
@@ -116,6 +122,12 @@ header .container {
   font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
   line-height: 1;
   text-transform: uppercase;
+}
+
+.primary__description {
+  text-align: center;
+  font-size: clamp(0.5rem, calc(5vw + 1rem), 1.5rem);
+  margin-bottom: 1rem;
 }
 
 /* WELCOME TO LYPTO BACKGROUND */
@@ -282,5 +294,23 @@ header .container {
   --clr-inner: #7aaffd;
   --clr-outer: #2065cc;
   --clr-accent: #008951;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  .menu {
+    gap: 1rem;
+  }
+  .wallet-btn {
+    margin-left: 0;
+    padding: 1rem;
+    max-width: 8rem;
+  }
+  .countdown h1 {
+    font-size: 2rem;
+  }
+  .countdown p {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

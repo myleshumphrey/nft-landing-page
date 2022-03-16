@@ -22,6 +22,25 @@ p {
   margin: 0;
 }
 
+/* HEADER */
+
+header {
+  box-shadow: var(--header-shadow);
+  background: rgb(56, 93, 196);
+}
+
+header .container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  align-items: left;
+}
+
 section {
   padding: 5em 0;
 }
@@ -30,26 +49,6 @@ section {
   width: 85%;
   max-width: 65em;
   margin: 0 auto;
-}
-
-/* HEADER */
-
-header {
-  box-shadow: var(--header-shadow);
-}
-
-/*
-header .container {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-*/
-.menu {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  background: red;
 }
 
 /* Split - About Section */
@@ -61,13 +60,13 @@ header .container {
   justify-content: center;
   margin-top: 5em;
 
-  &>* {
+  & > * {
     flex-basis: 30%;
     min-width: 15em;
   }
 }
 
-.spacing>*+* {
+.spacing > * + * {
   margin-top: var(--spacer, 2rem);
 }
 
@@ -106,6 +105,12 @@ header .container {
   text-transform: uppercase;
 }
 
+.primary__description {
+  text-align: center;
+  font-size: clamp(0.5rem, calc(5vw + 1rem), 1.5rem);
+  margin-bottom: 1rem;
+}
+
 /* WELCOME TO LYPTO BACKGROUND */
 .hero {
   color: white;
@@ -131,18 +136,13 @@ header .container {
   line-height: 1;
   color: #17353d;
   margin-bottom: 1rem;
-
-  
 }
 
 .section__description {
   text-align: center;
   font-size: clamp(0.5rem, calc(5vw + 1rem), 1.5rem);
   margin-bottom: 1rem;
-
 }
-
-
 
 /* LYP - ABOUT MENU SELECTION */
 
@@ -195,7 +195,6 @@ header .container {
 
 /* ABOUT PAGE */
 
-
 .about-title {
   text-align: center;
   font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
@@ -203,9 +202,8 @@ header .container {
   line-height: 1;
   color: #17353d;
   margin-bottom: 4rem;
-
-  
 }
+
 .about {
   background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
   padding: 3em;
@@ -276,4 +274,24 @@ header .container {
   --clr-inner: #7aaffd;
   --clr-outer: #2065cc;
   --clr-accent: #008951;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  .menu {
+    gap: 1rem;
+  }
+  .wallet-btn {
+    margin-left: 0;
+    padding: 1rem;
+    max-width: 8rem;
+  }
+  .countdown h1 {
+    font-size: 2rem;
+  }
+  .countdown p {
+    font-size: 1rem;
+  }
 }
