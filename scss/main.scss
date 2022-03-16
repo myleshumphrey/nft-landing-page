@@ -38,7 +38,8 @@ header .container {
 .menu {
   display: flex;
   gap: 2rem;
-  align-items: left;
+  align-items: center;
+  height: 50px;
 }
 
 section {
@@ -49,6 +50,12 @@ section {
   width: 85%;
   max-width: 65em;
   margin: 0 auto;
+}
+
+#connectWallet {
+  display: flex;
+  align-self: center;
+  margin-left: auto;
 }
 
 /* Split - About Section */
@@ -201,7 +208,7 @@ section {
   /*font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);*/
   line-height: 1;
   color: #17353d;
-  margin-bottom: 4rem;
+  margin-bottom: 4em;
 }
 
 .about {
@@ -274,6 +281,10 @@ section {
   --clr-inner: #7aaffd;
   --clr-outer: #2065cc;
   --clr-accent: #008951;
+  .sub-title {
+    color: #fff;
+    margin: 1em auto;
+  }
 }
 
 
@@ -282,6 +293,7 @@ section {
 @media screen and (max-width: 768px) {
   .menu {
     gap: 1rem;
+    height: auto;
   }
   .wallet-btn {
     margin-left: 0;
@@ -293,5 +305,18 @@ section {
   }
   .countdown p {
     font-size: 1rem;
+  }
+  .section__description {
+    font-size: 1em;
+  }
+  #connectWallet {
+    font-size: 1em;
+  }
+  .about {
+    padding: 1em;
+    blockquote {
+      margin: auto .5em; 
+      margin-bottom: 1.5em;// todo: play with this value
+    }
   }
 }
