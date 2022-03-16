@@ -234,7 +234,7 @@ section {
   /*font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);*/
   line-height: 1;
   color: #17353d;
-  margin-bottom: 4em;
+  margin-bottom: 2.5em;
 }
 
 .about {
