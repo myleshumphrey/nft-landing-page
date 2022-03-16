@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   line-height: 1.6;
 }
 
@@ -23,7 +23,7 @@ p {
 }
 
 section {
-  padding: 7em 0;
+  padding: 5em 0;
 }
 
 .container {
@@ -31,6 +31,28 @@ section {
   max-width: 65em;
   margin: 0 auto;
 }
+
+/* HEADER */
+
+header {
+  box-shadow: var(--header-shadow);
+}
+
+/*
+header .container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+*/
+.menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background: red;
+}
+
+/* Split - About Section */
 
 .split {
   display: flex;
@@ -43,12 +65,13 @@ section {
     flex-basis: 30%;
     min-width: 15em;
   }
-
 }
 
 .spacing>*+* {
-  margin-top: var(--spacer, 2rem)
+  margin-top: var(--spacer, 2rem);
 }
+
+/* Buttons */
 
 .btn {
   display: inline-block;
@@ -57,19 +80,24 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.125rem;
-  padding: .5em 1.25em;
+  padding: 0.5em 1.25em;
   background: var(--clr-accent, blue);
-  border-radius: .25em;
-  transition:
-    transform 250ms ease-in-out,
-    opacity 250ms linear;
+  border-radius: 0.25em;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
 }
 
 .btn:hover,
 .btn:focus {
   transform: scale(1.1);
-  opacity: .9;
+  opacity: 0.9;
 }
+
+.wallet-btn {
+  margin-left: 2rem;
+  border-color: transparent;
+}
+
+/* WELCOME TO LYPTO */
 
 .primary-title {
   font-size: 4rem;
@@ -78,24 +106,15 @@ section {
   text-transform: uppercase;
 }
 
-.section-title {
-  text-align: center;
-  font-size: clamp(4rem, calc(5vw + 1rem) 6rem);
-  line-height: 1;
-  color: #17353d;
-  margin-bottom: 3rem;
-
-}
-
+/* WELCOME TO LYPTO BACKGROUND */
 .hero {
   color: white;
   text-align: center;
-  padding: 15em 0;
+  padding: 8em 0;
   background: #222;
 
   @supports (background-blend-mode: multiply) {
-    background: url(../images/Products/LyptoWebsiteBanner_PreMint-02.png),
-      radial-gradient(#444, #111);
+    background: url(../images/Products/LyptoWebsiteBanner_PreMint-02.png), radial-gradient(#444, #111);
     background-blend-mode: multiply;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -103,19 +122,42 @@ section {
   }
 }
 
+/* WHAT IS LYPTO? */
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
+  /*font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);*/
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 1rem;
+
+  
+}
+
+.section__description {
+  text-align: center;
+  font-size: clamp(0.5rem, calc(5vw + 1rem), 1.5rem);
+  margin-bottom: 1rem;
+
+}
+
+
+
+/* LYP - ABOUT MENU SELECTION */
+
 .featured {
   background: #eee;
 
   &__item {
     display: block;
     position: relative;
-    transform: scale(.85);
+    transform: scale(0.85);
     transition: transform 250ms ease-in-out;
     text-decoration: none;
     color: #333;
     text-align: center;
     line-height: 1.2;
-
 
     &:hover,
     &:focus {
@@ -128,7 +170,7 @@ section {
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0%;
       left: 8%;
@@ -136,7 +178,6 @@ section {
       border-radius: 50%;
       background: #2193b0;
       z-index: -1;
-
     }
   }
 
@@ -152,6 +193,19 @@ section {
   }
 }
 
+/* ABOUT PAGE */
+
+
+.about-title {
+  text-align: center;
+  font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
+  /*font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);*/
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 4rem;
+
+  
+}
 .about {
   background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
   padding: 3em;
@@ -160,10 +214,10 @@ section {
   text-align: center;
 
   &__title {
-    font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+    font-size: clamp(2rem, calc(5vw + 1rem), 5.5rem);
     line-height: 1;
     color: #fff;
-    text-shadow: 0 0 .2em rgba(#000, .2);
+    text-shadow: 0 0 0.2em rgba(#000, 0.2);
   }
 
   &__image {
@@ -174,32 +228,36 @@ section {
     text-align: left;
     margin-bottom: 9em;
 
-&__title {
-  margin: 0;
-}
-    
+    &__title {
+      margin: 0;
+      text-align: left;
+    }
+
     &__image {
       float: right;
       width: 50%;
       shape-outside: url(../images/Products/lyp_the-collection.png);
       shape-margin: 1em;
-      margin: 0 -5em 0 0;
+      margin: 0 -6em 0 0;
     }
 
     &.the-artist {
       .product__image {
-      float: left;
-      shape-outside: url(../images/Products/lyp_the-artist.png);
-      margin: 0 0 0 -5em;
-      shape-margin: 2em;
+        float: left;
+        shape-outside: url(../images/Products/lyp_the-artist.png);
+        margin: 0 0 0 -5em;
+        shape-margin: 2em;
       }
     }
-
   }
 }
 
 .hero {
-  --clr-accent: #faa700
+  --clr-accent: #faa700;
+}
+
+.wallet-btn {
+  --clr-accent: #faa700;
 }
 
 .the-collection {
