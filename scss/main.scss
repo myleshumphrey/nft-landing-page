@@ -327,7 +327,7 @@ section {
 /* Three columns side by side */
 .column {
   float: left;
-  width: 25%;
+  width: 50%;
   margin-bottom: 16px;
   padding: 0 1em;
 }
@@ -335,7 +335,7 @@ section {
 /* Display the columns below each other instead of side by side on small screens */
 @media screen and (max-width: 650px) {
   .column {
-    width: 100%;
+    width: 80%;
     display: block;
   }
 }
