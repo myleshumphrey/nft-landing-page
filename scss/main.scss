@@ -176,7 +176,7 @@ section {
       }
     }
 
-    &::after {
+    /*&::after {
       content: "";
       position: absolute;
       top: 0%;
@@ -185,7 +185,7 @@ section {
       border-radius: 50%;
       background: #2193b0;
       z-index: -1;
-    }
+    }*/
   }
 
   &__details {

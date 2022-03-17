@@ -192,6 +192,16 @@ section {
   color: #333;
   text-align: center;
   line-height: 1.2;
+  /*&::after {
+      content: "";
+      position: absolute;
+      top: 0%;
+      left: 8%;
+      padding: 85% 85% 0 0;
+      border-radius: 50%;
+      background: #2193b0;
+      z-index: -1;
+    }*/
 }
 
 .featured__item:hover, .featured__item:focus {
@@ -202,17 +212,6 @@ section {
 .featured__item:hover .featured__details, .featured__item:focus .featured__details {
   opacity: 1;
   text-shadow: 0 0 2em white;
-}
-
-.featured__item::after {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 8%;
-  padding: 85% 85% 0 0;
-  border-radius: 50%;
-  background: #2193b0;
-  z-index: -1;
 }
 
 .featured__details {
