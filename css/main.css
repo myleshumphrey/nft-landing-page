@@ -279,6 +279,24 @@ section {
   }
 }
 
+/* RoadMap */
+.roadmap {
+  background: #eee;
+}
+
+.roadmap__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.roadmap__img {
+  min-width: 325px;
+}
+
 .hero {
   --clr-accent: #faa700;
 }

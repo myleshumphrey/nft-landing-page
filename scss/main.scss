@@ -257,6 +257,31 @@ section {
   }
 }
 
+
+
+/* RoadMap */
+
+
+.roadmap {
+  background: #eee;
+
+ 
+  &__div {
+    display: flex;
+    justify-content: center;
+  }
+  
+  &__img {
+    min-width: 325px;
+
+  }
+
+    
+  }
+
+
+
+
 .hero {
   --clr-accent: #faa700;
 }
