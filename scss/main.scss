@@ -67,13 +67,13 @@ section {
   justify-content: center;
   margin-top: 5em;
 
-  & > * {
+  &>* {
     flex-basis: 30%;
     min-width: 15em;
   }
 }
 
-.spacing > * + * {
+.spacing>*+* {
   margin-top: var(--spacer, 2rem);
 }
 
@@ -134,9 +134,18 @@ section {
   }
 }
 
+.section-title {
+  text-align: center;
+  font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
+  /*font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);*/
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 3rem;
+}
+
 /* WHAT IS LYPTO? */
 
-.section-title {
+.whatlypto-title {
   text-align: center;
   font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
   /*font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);*/
@@ -144,6 +153,8 @@ section {
   color: #17353d;
   margin-bottom: 1rem;
 }
+
+
 
 .section__description {
   text-align: center;
@@ -208,7 +219,7 @@ section {
   /*font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);*/
   line-height: 1;
   color: #17353d;
-  margin-bottom: 2.5em;
+  margin-bottom: 2em;
 }
 
 .about {
@@ -265,22 +276,39 @@ section {
 .roadmap {
   background: #eee;
 
- 
+
   &__div {
     display: flex;
     justify-content: center;
   }
-  
+
   &__img {
     min-width: 325px;
 
   }
 
-    
+
+}
+
+/* FAQ */
+
+
+.faq {
+  background: #eee;
+
+
+  &__div {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    min-width: 325px;
+
   }
 
 
-
+}
 
 .hero {
   --clr-accent: #faa700;
@@ -306,6 +334,7 @@ section {
   --clr-inner: #7aaffd;
   --clr-outer: #2065cc;
   --clr-accent: #008951;
+
   .sub-title {
     color: #fff;
     margin: 1em auto;
@@ -319,29 +348,37 @@ section {
   .menu {
     gap: 1rem;
     height: auto;
+    font-size: clamp(0.1rem, calc(5vw + 1rem), 0.45rem);
   }
+
   .wallet-btn {
     margin-left: 0;
     padding: 1rem;
     max-width: 8rem;
   }
+
   .countdown h1 {
     font-size: 2rem;
   }
+
   .countdown p {
     font-size: 1rem;
   }
+
   .section__description {
     font-size: 1em;
   }
+
   #connectWallet {
     font-size: 1em;
   }
+
   .about {
     padding: 1em;
+
     blockquote {
-      margin: auto .5em; 
-      margin-bottom: 1.5em;// todo: play with this value
+      margin: auto .5em;
+      margin-bottom: 1.5em; // todo: play with this value
     }
   }
 }
@@ -375,8 +412,9 @@ section {
   padding: 0 16px;
 }
 
-/* Clear floats */ 
-.container::after, .row::after {
+/* Clear floats */
+.container::after,
+.row::after {
   content: "";
   clear: both;
   display: table;
@@ -401,4 +439,3 @@ section {
 .button:hover {
   background-color: #555;
 }
-

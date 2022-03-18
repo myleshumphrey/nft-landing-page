@@ -158,8 +158,17 @@ section {
   }
 }
 
-/* WHAT IS LYPTO? */
 .section-title {
+  text-align: center;
+  font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
+  /*font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);*/
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 3rem;
+}
+
+/* WHAT IS LYPTO? */
+.whatlypto-title {
   text-align: center;
   font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
   /*font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);*/
@@ -233,7 +242,7 @@ section {
   /*font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);*/
   line-height: 1;
   color: #17353d;
-  margin-bottom: 2.5em;
+  margin-bottom: 2em;
 }
 
 .about {
@@ -297,6 +306,24 @@ section {
   min-width: 325px;
 }
 
+/* FAQ */
+.faq {
+  background: #eee;
+}
+
+.faq__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.faq__img {
+  min-width: 325px;
+}
+
 .hero {
   --clr-accent: #faa700;
 }
@@ -333,6 +360,7 @@ section {
   .menu {
     gap: 1rem;
     height: auto;
+    font-size: clamp(0.1rem, calc(5vw + 1rem), 0.45rem);
   }
   .wallet-btn {
     margin-left: 0;
@@ -389,7 +417,8 @@ section {
 }
 
 /* Clear floats */
-.container::after, .row::after {
+.container::after,
+.row::after {
   content: "";
   clear: both;
   display: table;
